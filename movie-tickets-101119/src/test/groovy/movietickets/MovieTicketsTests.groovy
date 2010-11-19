@@ -94,4 +94,11 @@ class MovieTicketsTests {
         assert tickets.finishPurchase() == 120.0
     }
     
+    @Test
+    public void twentyMaturesShouldBeCharged120DollarsForDefaultMovieOnMovieday() {
+        tickets.startPurchase MOVIE_MOVIEDAY
+        20.times { tickets.addTicket PERSON_MATURE }
+        assert tickets.finishPurchase() == 120.0
+    }
+    
 }

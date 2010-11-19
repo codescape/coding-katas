@@ -15,11 +15,15 @@ class MovieTickets {
 
     float finishPurchase() {
         def sum
-        if (tickets.size >= 20) 
+        if (isGroup()) 
             sum = tickets.sum { 6 }
         else
             sum = tickets.sum { it.price }
-        sum + movie.price * tickets.size
+        sum + movie.calculate(isGroup()) * tickets.size
+    }
+    
+    def isGroup() {
+        tickets.size >= 20
     }
     
 }
