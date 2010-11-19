@@ -14,7 +14,12 @@ class MovieTickets {
     }
 
     float finishPurchase() {
-        tickets.sum { it.price } + movie.price * tickets.size
+        def sum
+        if (tickets.size >= 20) 
+            sum = tickets.sum { 6 }
+        else
+            sum = tickets.sum { it.price }
+        sum + movie.price * tickets.size
     }
     
 }
