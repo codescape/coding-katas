@@ -67,14 +67,14 @@ class MovieTicketsTests {
     }
     
     @Test
-    public void maturesShouldBeCharged11DollarsForDefaultMovieOnLoge() {
+    public void maturesShouldBeCharged13DollarsForDefaultMovieOnLoge() {
         tickets.startPurchase MOVIE_LOGE
         tickets.addTicket PERSON_MATURE
         assert tickets.finishPurchase() == 13.0
     }
     
     @Test
-    public void maturesShouldBeCharged11DollarsForDefaultMovieIn3D() {
+    public void maturesShouldBeCharged14DollarsForDefaultMovieIn3D() {
         tickets.startPurchase MOVIE_3D
         tickets.addTicket PERSON_MATURE
         assert tickets.finishPurchase() == 14.0
