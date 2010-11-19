@@ -2,6 +2,9 @@ package movietickets
 
 class MovieTickets {
    
+    static GROUP_SIZE = 20
+    static GROUP_PRICE = 6.0
+   
     def movie
     def tickets = []
    
@@ -16,14 +19,14 @@ class MovieTickets {
     float finishPurchase() {
         def sum
         if (isGroup()) 
-            sum = tickets.sum { 6 }
+            sum = [tickets.sum { GROUP_PRICE }, tickets.sum { it.price }].min()
         else
             sum = tickets.sum { it.price }
         sum + movie.calculate(isGroup()) * tickets.size
     }
     
     def isGroup() {
-        tickets.size >= 20
+        tickets.size >= GROUP_SIZE
     }
     
 }
