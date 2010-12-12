@@ -4,15 +4,15 @@ import spock.lang.Specification
 
 class CaesarLotterySpecs extends Specification {
     
-    def "conversion of Arabian numbers into Roman numbers"() {
-        when:
-        def result = new CaesarLottery().convert(arabian)
+    def "conversion of Arabic numeral into Roman numeral"() {
+        when: "a given Arabic numeral is converted"
+        def result = new CaesarLottery().convert(arabic)
         
-        then:
+        then: "the correct Roman numeral is returned"
         result == roman
         
         where:
-        arabian | roman
+        arabic | roman
         1  | "I"
         2  | "II"
         3  | "III"
@@ -52,6 +52,17 @@ class CaesarLotterySpecs extends Specification {
         37 | "XXXVII"
         38 | "XXXVIII"
         39 | "XXXIX"
+        40 | "XL"
+        41 | "XLI"
+        42 | "XLII"
+        43 | "XLIII"
+        44 | "XLIV"
+        45 | "XLV"
+        46 | "XLVI"
+        47 | "XLVII"
+        48 | "XLVIII"
+        49 | "XLIX"
+        50 | "L"
     }
     
 }

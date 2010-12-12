@@ -4,43 +4,43 @@ import org.junit.Test
 
 class CaesarLotteryTests {
     
-    @Test void shouldTransformArabian1ToRomanI() {
+    @Test void shouldTransformArabic1ToRomanI() {
         assert new CaesarLottery().convert(1) == "I"
     }
 
-    @Test void shouldTransformArabian2ToRomanII() {
+    @Test void shouldTransformArabic2ToRomanII() {
         assert new CaesarLottery().convert(2) == "II"
     }
     
-    @Test void shouldTransformArabian3ToRomanIII() {
+    @Test void shouldTransformArabic3ToRomanIII() {
         assert new CaesarLottery().convert(3) == "III"
     }
     
-    @Test void shouldTransformArabian4ToRomanIV() {
+    @Test void shouldTransformArabic4ToRomanIV() {
         assert new CaesarLottery().convert(4) == "IV"
     }
     
-    @Test void shouldTransformArabian5ToRomanV() {
+    @Test void shouldTransformArabic5ToRomanV() {
         assert new CaesarLottery().convert(5) == "V"
     }
 
-    @Test void shouldTransformArabian6ToRomanVI() {
+    @Test void shouldTransformArabic6ToRomanVI() {
         assert new CaesarLottery().convert(6) == "VI"
     }
 
-    @Test void shouldTransformArabian7ToRomanVII() {
+    @Test void shouldTransformArabic7ToRomanVII() {
         assert new CaesarLottery().convert(7) == "VII"
     }
 
-    @Test void shouldTransformArabian8ToRomanVIII() {
+    @Test void shouldTransformArabic8ToRomanVIII() {
         assert new CaesarLottery().convert(8) == "VIII"
     }
 
-    @Test void shouldTransformArabian9ToRomanIX() {
+    @Test void shouldTransformArabic9ToRomanIX() {
         assert new CaesarLottery().convert(9) == "IX"
     }
 
-    @Test void shouldTransformArabian10ToRomanX() {
+    @Test void shouldTransformArabic10ToRomanX() {
         assert new CaesarLottery().convert(10) == "X"
     }
     
