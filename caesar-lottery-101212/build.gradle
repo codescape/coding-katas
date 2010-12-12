@@ -1,0 +1,15 @@
+apply plugin: 'groovy'
+
+task "create-directories" << {
+   sourceSets.all*.groovy.srcDirs*.each { it.mkdirs() }
+   sourceSets.all*.resources.srcDirs*.each { it.mkdirs() }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    groovy 'org.codehaus.groovy:groovy:1.7.5'
+    testCompile 'junit:junit:4.8.2'
+}
