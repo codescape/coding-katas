@@ -11,7 +11,7 @@ class CaesarLotteryTests {
         41: "XLI", 42: "XLII", 43: "XLIII", 44: "XLIV", 45: "XLV", 46: "XLVI", 47: "XLVII", 48: "XLVIII", 49: "XLIX", 50: "L"]
 
     @Test
-    void convertArabinNumeralsInRomanNumerals() {
+    void convertArabicNumeralsInRomanNumerals() {
         conversions.each { key, value ->
             assert new CaesarLottery().convert(key) == value
         }
