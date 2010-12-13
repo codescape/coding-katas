@@ -36,4 +36,8 @@ class CaesarLotteryTests {
 		assert new CaesarLottery().convert(8) == "VIII"
 	}
 
+	@Test void convertArabic9ToRomanIX() {
+		assert new CaesarLottery().convert(9) == "IX"
+	}
+
 }
