@@ -44,4 +44,28 @@ class CaesarLotteryTests {
 		assert new CaesarLottery().convert(10) == "X"
 	}
 
+	@Test void convertArabic11ToRomanXI() {
+		assert new CaesarLottery().convert(11) == "XI"
+	}
+
+	@Test void convertArabic12ToRomanXII() {
+		assert new CaesarLottery().convert(12) == "XII"
+	}
+	
+	@Test void convertArabic13ToRomanXIII() {
+		assert new CaesarLottery().convert(13) == "XIII"
+	}
+	
+	@Test void convertArabic14ToRomanXIV() {
+		assert new CaesarLottery().convert(14) == "XIV"
+	}
+	
+	@Test void convertArabic15ToRomanXV() {
+		assert new CaesarLottery().convert(15) == "XV"
+	}
+
+	@Test void convertArabic15ToRomanXV() {
+		assert new CaesarLottery().convert(15) == "XV"
+	}
+
 }
