@@ -3,7 +3,8 @@ package caesarlottery
 class CaesarLottery {
 	
 	String convert(arabic) {
-		"I"
+		if (arabic == 1) "I"
+		else "II"
 	}
 
 }
