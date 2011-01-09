@@ -1,7 +1,6 @@
 package caesarlottery
 
 import org.junit.Test
-import caesarlottery.CaesarLottery
 
 class CaesarLotteryTests {
 
@@ -32,6 +31,5 @@ class CaesarLotteryTests {
     assert CaesarLottery.convert(42) == "XLII"
     assert CaesarLottery.convert(99) == "XCIX"
   }
-
 
 }
