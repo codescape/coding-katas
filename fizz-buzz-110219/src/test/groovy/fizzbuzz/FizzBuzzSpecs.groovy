@@ -10,12 +10,16 @@ import spock.lang.Specification
  */
 class FizzBuzzSpecs extends Specification {
     
+    static final max = 100
+    static final divisibleByThree = (1..max).findAll { it % 3 == 0 }
+    static final divisibleByFive = (1..max).findAll { it % 5 == 0 }
+    
     def "numbers divisible by 3 but not divisible by 5 become the word fizz"() {
         expect:
         FizzBuzz.tell(number) == "fizz"
         
         where:
-        number << [3, 6, 9, 12, 18, 21, 24, 27, 33, 36, 39, 42, 48, 51, 54, 57, 63, 66, 69, 72, 78, 81, 84, 87, 93, 96, 99]
+        number << divisibleByThree - divisibleByFive
     }
     
     def "numbers divisible by 5 but not divisible by 3 become the word buzz"() {
@@ -23,7 +27,7 @@ class FizzBuzzSpecs extends Specification {
         FizzBuzz.tell(number) == "buzz"
         
         where:
-        number << [5, 10, 20, 25, 35, 40, 50, 55, 65, 70, 80, 85, 95, 100]
+        number << divisibleByFive - divisibleByThree
     }
 
     def "numbers divisible by 3 and 5 become the word fizzbuzz"() {
@@ -31,7 +35,15 @@ class FizzBuzzSpecs extends Specification {
         FizzBuzz.tell(number) == "fizzbuzz"
         
         where:
-        number << [15, 30, 45, 60, 75, 90]
+        number << divisibleByThree.intersect(divisibleByFive)
+    }
+    
+    def "other numbers should stay as they are"() {
+        expect:
+        FizzBuzz.tell(number) == number
+        
+        where:
+        number << (1..max) - divisibleByThree - divisibleByFive
     }
     
 }
