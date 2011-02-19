@@ -25,5 +25,13 @@ class FizzBuzzSpecs extends Specification {
         where:
         number << [5, 10, 20, 25, 35, 40, 50, 55, 65, 70, 80, 85, 95, 100]
     }
+
+    def "numbers divisible by 3 and 5 become the word fizzbuzz"() {
+        expect:
+        FizzBuzz.tell(number) == "fizzbuzz"
+        
+        where:
+        number << [15, 30, 45, 60, 75, 90]
+    }
     
 }
