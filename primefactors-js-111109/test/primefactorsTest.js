@@ -1,4 +1,4 @@
-PrimefactorsTestCase = new TestCase("Prime Factors", {
+PrimeFactorsTestCase = new TestCase("Prime Factors", {
 
     testForOne: function() {
         assertEquals([], PrimeFactors.generate(1));
